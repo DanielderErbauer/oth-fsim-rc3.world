@@ -1,0 +1,11 @@
+# TODO: Merge with README or create proper documentation
+# Layer Order from top to bottom
+
+[...]			# (Tile Layer) Additional foreground layers, if needed
+spriteForeground	# (Tile Layer) Tiles/Sprites placed here a drawn after player sprites (e. g. player sprites can hide behind)
+floorLayer 		# !!! ESSENTIAL !!! (Object Layer) Specifies the layer the layer, players are standing on (e.g. marks border between foreground and background)
+spriteBackground	# (Tile Layer) Tiles/Sprites placed here a drawn before player sprites (e. g. player sprites can't hide behind) [Example: vegetables on soil]
+groundOverlay		# (Tile Layer) Like spriteBackground, but is drawn before it (e. g. sprites on this layer are possibly hidden behind sprites on one layer above) [Example: soil on ground]
+ground			# (Tile Layer) Like layer $one_above, but $drawn_before_bla [Example: actual ground like dirt or grass]
+[...]			# (Tile Layer) an abitrary number of special layers, for more info see here https://howto.rc3.world/maps.en.html#special-layers
+start			# !!! ESSENTIAL !!! (Tile Layer) Specifies start points on a map, must have a porperty called "startLayer" with value "true" of type "bool"
